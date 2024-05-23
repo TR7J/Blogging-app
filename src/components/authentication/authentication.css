@@ -1,0 +1,108 @@
+.container{
+    background-color: whitesmoke;
+    width: 600px;
+    height: 480px;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-header{
+    display: flex;
+    border: 1px solid #A0D2EB;
+    width: 200px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.log-in{
+    margin: 5px auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 1;
+    height: 30px;
+}
+
+.hover{
+    position: absolute;
+    background-color: #A0D2EB;
+    height: 30px;
+    width: 100px;
+    position: absolute;
+    left: 0;
+    left: 0%;
+    z-index: -1;
+}
+
+.sign-up{
+    margin: 5px auto;
+    z-index: 1;
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.container-inputs{
+    margin-top: 20px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input{
+    margin-bottom: 20px;
+}
+
+.input label{
+    display: block;
+}
+
+.input input{
+    width: 300px;
+    height: 30px;
+    border: 1px solid #A0D2EB;
+}
+
+.container-forgotpass span{
+    color: #A0D2EB;
+    cursor: pointer;
+}
+
+.container-buttons{
+    display: flex;
+    margin: 30px auto;
+    gap: 25px;
+}
+
+.switch-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 40px;
+    background-color: #A0D2EB;
+    border-radius: 45px;
+    cursor: pointer;
+    border: none;
+    color: white;
+}
+
+#login{
+    left: 50px;
+}
+
+#register{
+    left: 450px
+}
