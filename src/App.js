@@ -1,11 +1,11 @@
-import logo from './logo.svg';
+
 import './App.css';
-import Authentication from './components/authentication/authentication';
+import Navigation from './components/navigation bar/navigation'
 
 function App() {
   return (
     <div >
-      <Authentication/>
+      <Navigation/>
     </div>
   );
 }
