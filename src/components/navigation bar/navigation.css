@@ -1,4 +1,4 @@
-*{
+/* *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,6 +9,7 @@
     width: 100%;
     top: 0;
     left: 0;
+    z-index: 1;
     height: 75px;
     background-color: #A0D2EB;
     padding: 30px;
@@ -108,7 +109,9 @@
         background-color: #A0D2EB;
         gap: 20px;
         transition: 1s;
-        transform: translateY(-100vh);
+        transform: translateY(-500vh);
+        min-width: 375px;
+        overflow-x: hidden;
     }
 
     .header-nav-lists{
@@ -123,4 +126,4 @@
     .header .responsive_nav{
         transform: none;
     }
-}
+} */

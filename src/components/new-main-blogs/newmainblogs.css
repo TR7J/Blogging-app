@@ -1,0 +1,119 @@
+.main-blog{
+    display: flex;
+    border: 1px solid #A0D2EB;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2), 0 0 40px rgba(0, 0, 0, 0.15);
+    margin-top: 20px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-blog-img{
+    flex: 1;
+}
+
+.blog-img{
+    width: 100%;
+    height: auto
+}
+
+.main-blog-content{
+    flex: 2;
+    padding: 1rem;
+}
+
+.main-blog-content h2{
+    font-size: 1.2rem;
+}
+
+.footer-p{
+    color: #A0D2EB;
+    font-weight: 800;
+}
+
+@media screen and (min-width: 350px)  {
+    
+    .main-blog-img{
+        flex: 1;
+    }
+
+    .main-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+@media screen and (min-width: 992px)  {
+
+
+    .blogs-main-title{
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .blogs{
+        margin-top: 90px;
+        padding: 10px;
+    }
+
+    .main-blogs{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+
+    }
+
+    .main-blog{
+        border-radius: 10px;
+        border: 1px solid #A0D2EB;
+        padding: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-blog:hover{
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+    }
+
+    .main-blog-img{
+        border-radius: 10px;
+        height: 20rem;
+    }
+
+    .main-blog-image img{
+        height: 100%;
+        border-radius: 10px;
+        min-height: 350px;
+    }
+
+    .main-blog-about{
+        margin-top: 20px;
+    }
+
+    .main-blog-footer{
+        margin-top: 20px;
+    }
+
+    .search-input{
+        width: 300px;
+        height: 45px;
+        border: 1px solid #A0D2EB;
+    }
+
+    .blog-img{
+        width: 450px;
+        height: 300px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+
+}
