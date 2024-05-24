@@ -10,8 +10,8 @@ function App() {
   return (
     <div >
       <Newsandsearch/>
-      <NewNavigation/>
-      <NewMainBlogs/>
+      {/* <NewNavigation/> */}
+      {/* <NewMainBlogs/> */}
       {/* <Navigation/> */}
       {/* <MainBlogs/> */}
     </div>
