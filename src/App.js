@@ -9,6 +9,8 @@ import Home from './pages/Home/home';
 import CreateNew from './pages/CreateNew';
 import Profile from './pages/Profile';
 import Authentication from './pages/authentication/authentication';
+import SignUp from './pages/authentication/signup';
+import Footer from './components/footer/footer';
 
 function App() {
   return (
@@ -23,8 +25,10 @@ function App() {
             {/* <NewMainBlogs/> */}
             {/* <Navigation/> */}
             {/* <MainBlogs/> */}
+            <Route path='/Signup' element={<SignUp/>}/>
         </Routes>
       </BrowserRouter>
+      <Footer/>
     </>
   );
 }

@@ -1,12 +1,13 @@
 .main-blog{
     display: flex;
-    border: 1px solid #A0D2EB;
+    border: 1px solid whitesmoke;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2), 0 0 40px rgba(0, 0, 0, 0.15);
     margin-top: 20px;
     padding: 10px;
     justify-content: center;
     align-items: center;
+    background-color: whitesmoke;
 }
 
 .main-blog-img{
@@ -28,7 +29,7 @@
 }
 
 .footer-p{
-    color: #A0D2EB;
+    color: black;
     font-weight: 800;
 }
 
@@ -69,7 +70,7 @@
 
     .main-blog{
         border-radius: 10px;
-        border: 1px solid #A0D2EB;
+        border: 1px solid whitesmoke;
         padding: 10px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         display: flex;
@@ -105,7 +106,8 @@
     .search-input{
         width: 300px;
         height: 45px;
-        border: 1px solid #A0D2EB;
+        border: 1px solid ;
+
     }
 
     .blog-img{

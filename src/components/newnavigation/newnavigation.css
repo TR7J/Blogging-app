@@ -20,8 +20,18 @@
 .nav-links{
     margin-left: 0;
     text-decoration: none;
-    color: #6197b2;
+    color: black;
     margin-right: 15px;
+}
+
+.log-out{
+    background-color: #FF862C;
+    cursor: pointer;
+    border: none;
+    color: white;
+    width: 100px;
+    height: 25px;
+    border-radius: 5px;
 }
 
 .nav-links:hover{
@@ -45,5 +55,27 @@
     .nav-links{
         font-size: 1.5rem;
         margin-right: 50px;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .nav{
+        font-size: smaller;
+
+    }
+
+    .log-out{
+        width: 75px;
+    }
+}
+
+@media screen and (max-width: 440px){
+    .nav{
+        font-size: x-small;
+    }
+
+    .log-out{
+        width: 60px;
     }
 }
