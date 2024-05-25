@@ -1,30 +1,26 @@
 import React from "react";
-import './newsandsearch.css';
+import './home.css';
+import '../../components/new-main-blogs/newmainblogs.css'
 import { DummyMainBlogs } from '../../newmainblogsdata'
 import { CiSearch } from "react-icons/ci";
-import { DummyNewsBlogs } from "../../news";
-/* import { DummyMainBlogs } from "../../newmainblogsdata"; */
+import { DummyNewsBlogs } from "../../news"; 
+/* import { DummyMainBlogs } from "../../newmainblogsdata";  */
 import News from "./news";
-import NewNavigation from '../newnavigation/newnavigation';
-import {FaBars, FaTimes} from "react-icons/fa";
+import NewNavigation from '../../components/newnavigation/newnavigation'; 
+/* import {FaBars, FaTimes} from "react-icons/fa"; */
 
-
-
-export default function Newsandsearch(){
+export default function Home(){
     const [blogs, setBlogs] = React.useState(DummyNewsBlogs)
-    /* const [ourBlogs, setOurBlogs] = React.useState(DummyMainBlogs) */
+    const [ourBlogs, setOurBlogs] = React.useState(DummyMainBlogs) 
     const [search, setSearch] = React.useState("")
-    const [ourBlogs, setMainBlogs] = React.useState(DummyMainBlogs)
-    function toggleSearch(){
-
-    }
+   /*  const [ourBlogs, setMainBlogs] = React.useState(DummyMainBlogs) */
     return(
         <div className="main-content">
             <div className="newsandsearch">
                 <div className="newsheadline">
                     <h1><span className="span-daily">Your Daily</span> <span className="span-news">News</span></h1>
                 </div>
-                <button className="search-btn" onClick={toggleSearch}>
+                <button className="search-btn">
                     <CiSearch/>
                 </button>
             </div>
@@ -42,35 +38,38 @@ export default function Newsandsearch(){
                     }
                 </div>
             </div>
-
-            <NewNavigation/>
+            <div>
+                <NewNavigation/> 
+            </div>
             <div className="main-blogs">
-                {
+               {
                     ourBlogs
                         .filter(function(z){
-                            if (search == "") {
-                                return z
+                            if (search === ""){
+                                return true
                             } else if(z.title.toLowerCase().includes(search.toLowerCase())){
-                                return z
+                                return true
+                            } else{
+                                return false
                             }
                         })
                         .map(function(z){
                             return (
                                 <div className="main-blog" key={z.id}>
                                     <div className="main-blog-img">
-                                        <img src={z.Image} alt="" className="blog-img" />
+                                        <img src={z.Image} alt="" className="blog-img"/>
                                     </div>
                                     <div className="main-blog-content">
                                         <h2>{z.title}</h2>
                                         <p>{z.description}</p>
                                         <div className="main-blog-footer">
-                                            <p className='footer-p'>{z.category}</p>
-                                        </div> 
+                                            <p className="footer-p">{z.category}</p>
+                                        </div>
                                     </div>
                                 </div>
                             )
-                        }) 
-                }
+                        })
+                } 
             </div>      
         </div>
     )

@@ -1,4 +1,4 @@
-import './newsandsearch.css';
+import './home.css';
 
 export default function News(props){
     return(

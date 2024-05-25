@@ -1,15 +1,17 @@
 import React from 'react'
 import './newnavigation.css'
+import { Link } from 'react-router-dom'
 
 export default function NewNavigation(){
     return(
         <div>
             <nav className="nav">
                 <ul className='nav-ul'>
-                    <li><a href="#" className='nav-links'>Create New</a></li>
-                    <li><a href="#" className='nav-links'>Categories</a></li>
-                    <li><a href="#" className='nav-links'>Profile</a></li>
-                    <li><a href="#" className='nav-links'>Chat Bot</a></li>
+                    <li><Link to={'/CreateNew'} className='nav-links'>Create New</Link></li>
+                    <li><Link to={'/'} className='nav-links'>Home</Link></li>
+                    <li><Link to={'/Profile'} className='nav-links'>Profile</Link></li>
+                    <li><Link to={'#'} className='nav-links'>Chat Bot</Link></li>
+                    <li><Link to={'/Authentication'} className='nav-links'>Authentication</Link></li>
                 </ul>
             </nav>
         </div>
