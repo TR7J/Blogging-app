@@ -1,7 +1,7 @@
-import './App.css';
+/* import './App.css'; */
 /* import Navigation from './components/navigation bar/navigation'
 import MainBlogs from './components/main-blogs/main-blogs' */
-import NewNavigation from './components/newnavigation/newnavigation';
+/* import NewNavigation from './components/newnavigation/newnavigation'; */
 /* import NewMainBlogs from './components/new-main-blogs/newmainblogs'; */
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
@@ -16,6 +16,7 @@ import DataScience from './pages/datascience';
 function App() {
   return (
     <>
+      <Authentication/>
       <BrowserRouter>
         <Routes>
             <Route exact path='/' element={<Home/>}/>

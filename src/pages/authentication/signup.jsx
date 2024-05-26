@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import './authentication.css'
 import { Link } from "react-router-dom";
 import Home from "../Home/home";
@@ -13,9 +13,9 @@ export default function SignUp(){
 
     const [hover, setHover] = React.useState(hoverElement)
 
-    function moveHoverRight() {
+/*     function moveHoverRight() {
         setHover(hoverElement)
-    }
+    } */
 
     function moveHoverLeft() {
         setHover(hoverElement)
@@ -31,7 +31,7 @@ export default function SignUp(){
         if (SignUp) {
             setGoToHome(true)
         }
-    })
+    }, [SignUp])
     function moveToHome(){
         if(name.current.value&&email.current.value&&password.current.value){
             localStorage.setItem("name", name.current.value)
