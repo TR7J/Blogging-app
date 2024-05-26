@@ -50,7 +50,7 @@ export default function Authentication(){
     return(
         <div className="main-sign">
 
-            <h1 className="four-three">FOUR 3</h1>
+            <h1 className="four-three">FOUR 3</h1>   
             <div className="main-authentication">
                 {goToHome ? <Home/> :
                 <div className="container">

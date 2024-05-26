@@ -3,10 +3,12 @@ import './home.css';
 import '../../components/new-main-blogs/newmainblogs.css'
 import { DummyMainBlogs } from '../../newmainblogsdata'
 import { CiSearch } from "react-icons/ci";
-import { DummyNewsBlogs } from "../../news"; 
+import { DummyNewsBlogs } from "../../news";
+import { DataSc } from "../../datasc"; 
 /* import { DummyMainBlogs } from "../../newmainblogsdata";  */
 import News from "./news";
 import NewNavigation from '../../components/newnavigation/newnavigation'; 
+import { Link } from "react-router-dom";
 /* import {FaBars, FaTimes} from "react-icons/fa"; */
 
 export default function Home(){
@@ -42,6 +44,35 @@ export default function Home(){
                 <NewNavigation/> 
             </div>
             <div className="main-blogs">
+                {
+                    DataSc
+                        .filter(function(z){
+                            if (search === ""){
+                                return true
+                            } else if(z.title.toLowerCase().includes(search.toLowerCase())){
+                                return true
+                            } else{
+                                return false
+                            }
+                        })
+                        .map(function(z) {
+                            return (
+                                <div className="main-blog" key={z.id}>
+                                    <div className="main-blog-img">
+                                        <Link to='/DataScience'><img src={z.Image} alt="" className="blog-img"/></Link>
+                                    </div>
+                                    <div className="main-blog-content">
+                                        <h2>{z.title}</h2>
+                                        <p>{z.description}</p>
+                                        <div className="main-blog-footer">
+                                            <p className="footer-p">{z.category}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            )
+                        })
+
+                }
                {
                     ourBlogs
                         .filter(function(z){
@@ -49,7 +80,7 @@ export default function Home(){
                                 return true
                             } else if(z.title.toLowerCase().includes(search.toLowerCase())){
                                 return true
-                            } else{
+                            } else{ 
                                 return false
                             }
                         })
@@ -69,6 +100,7 @@ export default function Home(){
                                 </div>
                             )
                         })
+
                 } 
             </div>      
         </div>

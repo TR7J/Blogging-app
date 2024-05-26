@@ -6,11 +6,12 @@ import NewNavigation from './components/newnavigation/newnavigation';
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home/home';
-import CreateNew from './pages/CreateNew';
+import CreateNew from './pages/CreateNew/CreateNew';
 import Profile from './pages/Profile';
 import Authentication from './pages/authentication/authentication';
 import SignUp from './pages/authentication/signup';
 import Footer from './components/footer/footer';
+import DataScience from './pages/datascience';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             {/* <Navigation/> */}
             {/* <MainBlogs/> */}
             <Route path='/Signup' element={<SignUp/>}/>
+            <Route path='/DataScience' element={<DataScience/>}/>
         </Routes>
       </BrowserRouter>
       <Footer/>

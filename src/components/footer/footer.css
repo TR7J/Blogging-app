@@ -1,8 +1,9 @@
 .footer{
     margin-top: 20px;
     background-color: transparent;
-    bottom: -999;
-    
+    bottom: 0;
+    right: 0;
+    left: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;

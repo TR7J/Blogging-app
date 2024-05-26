@@ -7,7 +7,7 @@ export default function News(props){
                 <img src={props.image} alt="" width="" height=""/>
             </div>
             <div className='news-description'>
-                <h2>{props.title}</h2>
+                <h2 className='news-description-h2'>{props.title}</h2>
                 <p>{props.description}</p>
             </div>
         </div>
