@@ -17,12 +17,12 @@ import DataScience from './pages/datascience';
 function App() {
   return (
     <>
-      <BrowserRouter basename='/Blogging-app'>
+      <BrowserRouter basename='/Blogging-app'> 
         <Routes>
-            <Route exact path='/' element={<Home/>}/>
+            <Route path='/' element={<Home/>}/>
             <Route path='/CreateNew' element={<CreateNew/>}/>
             <Route path='/Profile' element={<Profile/>}/>
-            <Route path='/Authentication' element={<Authentication/>}/>
+            <Route exact path='/Authentication' element={<Authentication/>}/>
             <Route path='/Signup' element={<SignUp/>}/>
             <Route path='/DataScience' element={<DataScience/>}/>
         </Routes>
