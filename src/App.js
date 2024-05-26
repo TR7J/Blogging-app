@@ -19,10 +19,10 @@ function App() {
     <>
       <BrowserRouter basename='/Blogging-app'>
         <Routes>
-            <Route exact path='/' element={<Home/>}/>
+            <Route exact path='/Home' element={<Home/>}/>
             <Route path='/CreateNew' element={<CreateNew/>}/>
             <Route path='/Profile' element={<Profile/>}/>
-            <Route path='/Authentication' element={<Authentication/>}/>
+            <Route path='/' element={<Authentication/>}/>
             <Route path='/Signup' element={<SignUp/>}/>
             <Route path='/DataScience' element={<DataScience/>}/>
         </Routes>
