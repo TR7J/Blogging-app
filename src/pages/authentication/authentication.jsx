@@ -13,7 +13,7 @@ export default function Authentication(){
     }
 
     const hoverElement = <div className="hover" style={styles1}></div>
-    const hoverElement2 = <div className="hover" style={styles2}></div>
+    /* const hoverElement2 = <div className="hover" style={styles2}></div> */
 
     const [hover, setHover] = React.useState(hoverElement)
 
