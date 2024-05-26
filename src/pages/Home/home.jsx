@@ -12,8 +12,8 @@ import { Link } from "react-router-dom";
 /* import {FaBars, FaTimes} from "react-icons/fa"; */
 
 export default function Home(){
-    const [blogs, setBlogs] = React.useState(DummyNewsBlogs)
-    const [ourBlogs, setOurBlogs] = React.useState(DummyMainBlogs) 
+    const [blogs] = React.useState(DummyNewsBlogs)
+    const [ourBlogs] = React.useState(DummyMainBlogs) 
     const [search, setSearch] = React.useState("")
    /*  const [ourBlogs, setMainBlogs] = React.useState(DummyMainBlogs) */
     return(
