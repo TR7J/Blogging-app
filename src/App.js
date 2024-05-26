@@ -1,8 +1,8 @@
-/* import './App.css'; */
-/* import Navigation from './components/navigation bar/navigation'
-import MainBlogs from './components/main-blogs/main-blogs' */
-/* import NewNavigation from './components/newnavigation/newnavigation'; */
-/* import NewMainBlogs from './components/new-main-blogs/newmainblogs'; */
+/*  import './App.css'; 
+import Navigation from './components/navigation bar/navigation' */
+/* import MainBlogs from './components/main-blogs/main-blogs' 
+import NewNavigation from './components/newnavigation/newnavigation'; 
+import NewMainBlogs from './components/new-main-blogs/newmainblogs'; */
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home/home';
@@ -22,18 +22,15 @@ function App() {
             <Route path='/CreateNew' element={<CreateNew/>}/>
             <Route path='/Profile' element={<Profile/>}/>
             <Route path='/Authentication' element={<Authentication/>}/>
-            {/* <NewNavigation/> */}
-            {/* <NewMainBlogs/> */}
-            {/* <Navigation/> */}
-            {/* <MainBlogs/> */}
             <Route path='/Signup' element={<SignUp/>}/>
             <Route path='/DataScience' element={<DataScience/>}/>
         </Routes>
         <Footer/> 
-      </BrowserRouter>
+      </BrowserRouter> 
       
     </>
   );
 }
 
 export default App;
+         
