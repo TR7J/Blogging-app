@@ -31,6 +31,7 @@ export default function Authentication(){
     const [goToHome, setGoToHome] = React.useState(false)
     const loginName = localStorage.getItem("name")
     const loginPass = localStorage.getItem("password")
+    const navigate = React.useNavigate()
 
     React.useEffect(function () {
         if (SignUp) {
@@ -41,7 +42,7 @@ export default function Authentication(){
     function doSignIn() {
         if (name.current.value === loginName && password.current.value === loginPass) {
             localStorage.setItem("signUp", name.current.value)
-            window.location.reload()
+            navigate('/Home')
         } else{
             alert('Wrong Details! Please Try Again')
         }

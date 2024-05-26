@@ -3,6 +3,7 @@ import './authentication.css'
 import { Link } from "react-router-dom";
 import Home from "../Home/home";
 
+
 export default function SignUp(){
 
     const styles2 = {
@@ -26,12 +27,13 @@ export default function SignUp(){
     const password = React.useRef()
     const SignUp = localStorage.getItem("signUp")
     const [goToHome, setGoToHome] = React.useState(false)
+    const navigate = React.useNavigate()
 
     React.useEffect(function () {
         if (SignUp) {
-            setGoToHome(true)
+            navigate('/Home')
         }
-    }, [SignUp])
+    }, [SignUp, navigate])
     function moveToHome(){
         if(name.current.value&&email.current.value&&password.current.value){
             localStorage.setItem("name", name.current.value)
@@ -39,7 +41,7 @@ export default function SignUp(){
             localStorage.setItem("password", password.current.value)
             localStorage.setItem("signUp", email.current.value)
             alert("Your New Account is ready!!")
-            window.location.reload()
+            navigate('/Home')
         }
     }   
 
