@@ -17,7 +17,7 @@ import DataScience from './pages/datascience';
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename='/Blogging-app'>
         <Routes>
             <Route exact path='/' element={<Home/>}/>
             <Route path='/CreateNew' element={<CreateNew/>}/>
