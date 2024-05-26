@@ -39,7 +39,7 @@ export default function SignUp(){
             localStorage.setItem("password", password.current.value)
             localStorage.setItem("signUp", email.current.value)
             alert("Your New Account is ready!!")
-          
+            window.location.reload()
         }
     }   
 
@@ -66,7 +66,7 @@ export default function SignUp(){
                         </div>
                     
                         <div className="input">
-                            <label htmlFor="">Password:</label>
+                            <label htmlFor="password">Password:</label>
                             <input type="password" name="password" id="username" placeholder="Password" required ref={password}/>
                         </div>
                     </div>
