@@ -1,8 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import './authentication.css'
 import { Link } from "react-router-dom";
 import Home from "../Home/home";
-
 
 export default function SignUp(){
 
@@ -14,9 +13,9 @@ export default function SignUp(){
 
     const [hover, setHover] = React.useState(hoverElement)
 
-/*     function moveHoverRight() {
+    function moveHoverRight() {
         setHover(hoverElement)
-    } */
+    }
 
     function moveHoverLeft() {
         setHover(hoverElement)
@@ -27,13 +26,12 @@ export default function SignUp(){
     const password = React.useRef()
     const SignUp = localStorage.getItem("signUp")
     const [goToHome, setGoToHome] = React.useState(false)
-    const navigate = React.useNavigate()
 
     React.useEffect(function () {
         if (SignUp) {
-            navigate('/Home')
+            setGoToHome(true)
         }
-    }, [SignUp, navigate])
+    })
     function moveToHome(){
         if(name.current.value&&email.current.value&&password.current.value){
             localStorage.setItem("name", name.current.value)
@@ -41,7 +39,7 @@ export default function SignUp(){
             localStorage.setItem("password", password.current.value)
             localStorage.setItem("signUp", email.current.value)
             alert("Your New Account is ready!!")
-            navigate('/Home')
+            window.location.reload()
         }
     }   
 
@@ -68,7 +66,7 @@ export default function SignUp(){
                         </div>
                     
                         <div className="input">
-                            <label htmlFor="password">Password:</label>
+                            <label htmlFor="">Password:</label>
                             <input type="password" name="password" id="username" placeholder="Password" required ref={password}/>
                         </div>
                     </div>
