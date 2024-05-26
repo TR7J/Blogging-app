@@ -39,7 +39,7 @@ export default function SignUp(){
             localStorage.setItem("password", password.current.value)
             localStorage.setItem("signUp", email.current.value)
             alert("Your New Account is ready!!")
-            window.location.reload()
+          
         }
     }   
 
