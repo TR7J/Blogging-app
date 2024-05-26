@@ -29,8 +29,9 @@ function App() {
             <Route path='/Signup' element={<SignUp/>}/>
             <Route path='/DataScience' element={<DataScience/>}/>
         </Routes>
+        <Footer/> 
       </BrowserRouter>
-      <Footer/>
+      
     </>
   );
 }
