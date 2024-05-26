@@ -72,7 +72,7 @@ export default function SignUp(){
                     </div>
                     <div className="container-buttons">
                         {/* <Link to="/" className="button-link"><button id="authentication" type="button" className="switch-btn" onClick={moveToHome}>Sign Up</button></Link> */}
-                        <Link to={'/Home'}><button id="authentication" type="button" className="switch-btn" onClick={moveToHome}>Sign Up</button></Link>
+                        <button id="authentication" type="button" className="switch-btn" onClick={moveToHome}>Sign Up</button>
                     </div>
                     <div className="container-noaccount">Already have an account? <span><Link to="/Authentication" className="span-signup">Log In</Link></span></div>
             </div>
