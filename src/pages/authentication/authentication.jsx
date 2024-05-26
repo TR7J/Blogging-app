@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import './authentication.css'
 import { Link } from "react-router-dom";
 import Home from "../Home/home";
@@ -13,14 +13,14 @@ export default function Authentication(){
     }
 
     const hoverElement = <div className="hover" style={styles1}></div>
-    const hoverElement2 = <div className="hover" style={styles2}></div>
+    /* const hoverElement2 = <div className="hover" style={styles2}></div> */
 
     const [hover, setHover] = React.useState(hoverElement)
 
-    function moveHoverRight() {
+/*     function moveHoverRight() {
         setHover(hoverElement2)
     }
-
+ */
     function moveHoverLeft() {
         setHover(hoverElement)
     }
@@ -36,7 +36,7 @@ export default function Authentication(){
         if (SignUp) {
             setGoToHome(true)
         }
-    })
+    }, [SignUp])
 
     function doSignIn() {
         if (name.current.value === loginName && password.current.value === loginPass) {
