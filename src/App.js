@@ -5,7 +5,7 @@ import NewNavigation from './components/newnavigation/newnavigation';
 import NewMainBlogs from './components/new-main-blogs/newmainblogs'; */
 import React from 'react';
 /* import { BrowserRouter, Route, Routes } from 'react-router-dom'; */
-import { HashRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home/home';
 import CreateNew from './pages/CreateNew/CreateNew';
 import Profile from './pages/Profile';
@@ -17,7 +17,7 @@ import DataScience from './pages/datascience';
 function App() {
   return (
     <>
-      <HashRouter>
+      <BrowserRouter>
         <Routes>
             <Route exact path='/' element={<Home/>}/>
             <Route path='/CreateNew' element={<CreateNew/>}/>
@@ -27,7 +27,7 @@ function App() {
             <Route path='/DataScience' element={<DataScience/>}/>
         </Routes>
         <Footer/> 
-      </HashRouter> 
+      </BrowserRouter> 
       
     </>
   );
