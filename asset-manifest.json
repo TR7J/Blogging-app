@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/Blogging-app/static/css/main.2fede6e8.css",
+    "main.js": "/Blogging-app/static/js/main.a37fe1a3.js",
+    "static/media/Computer-Science.jpeg": "/Blogging-app/static/media/Computer-Science.15140245f6efc2c272d4.jpeg",
+    "static/media/Tech.jpeg": "/Blogging-app/static/media/Tech.87cd110091c994c443f7.jpeg",
+    "static/media/Medicine.jpeg": "/Blogging-app/static/media/Medicine.b9b77791e31dc501888a.jpeg",
+    "static/media/Civil-Engineering.jpeg": "/Blogging-app/static/media/Civil-Engineering.2a791ce29ec550b49ad0.jpeg",
+    "static/media/footballOandE.jpeg": "/Blogging-app/static/media/footballOandE.5e6413464f470e7ca212.jpeg",
+    "static/media/software-engineering.jpeg": "/Blogging-app/static/media/software-engineering.c4a6543a085deabf60ec.jpeg",
+    "static/media/Aerospace-Engineering.jpeg": "/Blogging-app/static/media/Aerospace-Engineering.aebcb5ffb43bf35bacbe.jpeg",
+    "static/media/Business-analysis.jpeg": "/Blogging-app/static/media/Business-analysis.543b94ff710cb5f4fdab.jpeg",
+    "static/media/data-science.jpeg": "/Blogging-app/static/media/data-science.40fa28bf9c69ac383d3e.jpeg",
+    "static/media/BasketBall.jpeg": "/Blogging-app/static/media/BasketBall.964b74328853dcc10456.jpeg",
+    "static/media/Sports-science.jpeg": "/Blogging-app/static/media/Sports-science.274323f7e1117d9f49ae.jpeg",
+    "static/media/Chemical-Engineering.jpeg": "/Blogging-app/static/media/Chemical-Engineering.a90cff7c84e2a4904439.jpeg",
+    "static/media/business3.jpeg": "/Blogging-app/static/media/business3.631055aa15661af8d942.jpeg",
+    "index.html": "/Blogging-app/index.html",
+    "main.2fede6e8.css.map": "/Blogging-app/static/css/main.2fede6e8.css.map",
+    "main.a37fe1a3.js.map": "/Blogging-app/static/js/main.a37fe1a3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2fede6e8.css",
+    "static/js/main.a37fe1a3.js"
+  ]
+}
