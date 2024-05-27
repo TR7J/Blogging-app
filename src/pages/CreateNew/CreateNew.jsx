@@ -7,14 +7,26 @@ import { Link } from "react-router-dom";
 
 export default function CreateNew(){
 
-    const [blogs, setBlogs] = React.useState([]);
+    const [blogs, setBlogs] = React.useState(function () {
+        const mySavedBlogs = localStorage.getItem('blogs')
+        return mySavedBlogs ? JSON.parse(mySavedBlogs) : []
+    });
     const [blogCreate, setBlogCreate] = React.useState({title: '', description: '', img: null, category: '', likes: 0, comments:[]});
     const [blogId, setBlogId] = React.useState(null);
     const [comment, setComment] = React.useState('')
 
+    React.useEffect(function(){
+        localStorage.setItem('blogs', JSON.stringify(blogs))
+    }, [blogs])
+
     function createBlog(e) {
         if (e.target.name === "img") {
-            setBlogCreate({...blogCreate, img: e.target.files[0]});
+            const file = e.target.files[0];
+            const reader = new FileReader();
+            reader.onloadend = () => {
+                setBlogCreate({...blogCreate, img: reader.result});
+            };
+            reader.readAsDataURL(file);
         } else {
             setBlogCreate({...blogCreate, [e.target.name]: e.target.value});
         }
@@ -90,7 +102,7 @@ export default function CreateNew(){
                         return (
                             <div key={id} className="main-blog">
                                 <div className="main-blog-img">
-                                    {blog.img && <img src={URL.createObjectURL(blog.img)} className="blog-img" alt=""/>}
+                                    {blog.img && <img src={blog.img} className="blog-img" alt=""/>}
                                 </div>
                                 <div className="main-blog-content">
                                     <h2>{blog.title}</h2>
