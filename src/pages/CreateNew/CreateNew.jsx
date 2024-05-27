@@ -57,9 +57,9 @@ export default function CreateNew(){
             });
             setBlogs(editedBlog);
             setBlogId(null);
-        } else {
+        } else {  /*  for creating a new blog */
             setBlogs([...blogs, blogCreate]);
-        }
+        } /* for reseting the form input fields */
         setBlogCreate({title: '', description: '', img: null, category: '' , likes: 0, comments: []});
     }
 

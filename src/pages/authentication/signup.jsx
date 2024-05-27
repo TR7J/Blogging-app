@@ -13,6 +13,8 @@ export default function SignUp(){
     const hoverElement = <div className="hover" style={styles2}></div>
 
     const [hover, setHover] = React.useState(hoverElement)
+
+    
     /* Programmatically navigating to different routes within your application */
     const navigate = useNavigate(); 
 
