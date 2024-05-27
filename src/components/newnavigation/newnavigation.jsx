@@ -1,15 +1,18 @@
 import React from 'react'
 import './newnavigation.css'
 import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 
 
 export default function NewNavigation(){
 
+    const navigate = useNavigate()
     function logOut() {
         localStorage.removeItem("signUp")
-        window.location.reload()
+        navigate('/')
     }
+    
     return(
         <div>
             <nav className="nav">

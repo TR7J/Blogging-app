@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate} from "react-router-dom"; 
 import './authentication.css'
 import { Link } from "react-router-dom";
 import Home from "../Home/home";
@@ -12,6 +13,7 @@ export default function SignUp(){
     const hoverElement = <div className="hover" style={styles2}></div>
 
     const [hover, setHover] = React.useState(hoverElement)
+    const navigate = useNavigate(); 
 
     function moveHoverRight() {
         setHover(hoverElement)
@@ -31,7 +33,7 @@ export default function SignUp(){
         if (SignUp) {
             setGoToHome(true)
         }
-    })
+    }, [SignUp])
     function moveToHome(){
         if(name.current.value&&email.current.value&&password.current.value){
             localStorage.setItem("name", name.current.value)
@@ -39,7 +41,9 @@ export default function SignUp(){
             localStorage.setItem("password", password.current.value)
             localStorage.setItem("signUp", email.current.value)
             alert("Your New Account is ready!!")
-            window.location.reload()
+            /* window.location.reload() */
+           /*  history.push('/Home'); */
+            navigate('/Home')
         }
     }   
 
@@ -74,7 +78,7 @@ export default function SignUp(){
                         {/* <Link to="/" className="button-link"><button id="authentication" type="button" className="switch-btn" onClick={moveToHome}>Sign Up</button></Link> */}
                         <button id="authentication" type="button" className="switch-btn" onClick={moveToHome}>Sign Up</button>
                     </div>
-                    <div className="container-noaccount">Already have an account? <span><Link to="/Authentication" className="span-signup">Log In</Link></span></div>
+                    <div className="container-noaccount">Already have an account? <span><Link to="/" className="span-signup">Log In</Link></span></div>
             </div>
             }
         </div>
