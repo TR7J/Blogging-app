@@ -5,28 +5,45 @@ import { HiMiniArrowLeftCircle } from "react-icons/hi2";
 import { Link } from "react-router-dom";
 
 
+/* localStorage to persist data across page reloads */
+
 export default function CreateNew(){
 
+    /* blogs: This state holds the list of blogs. It initializes with data from localStorage if available, or an empty array otherwise. */
     const [blogs, setBlogs] = React.useState(function () {
         const mySavedBlogs = localStorage.getItem('blogs')
         return mySavedBlogs ? JSON.parse(mySavedBlogs) : []
     });
+    /* blogCreate: This state holds the data for the blog being created or edited. */
     const [blogCreate, setBlogCreate] = React.useState({title: '', description: '', img: null, category: '', likes: 0, comments:[]});
+    /* This state holds the ID of the blog currently being edited. It is null when creating a new blog. */
     const [blogId, setBlogId] = React.useState(null);
+    /* comment: This state holds the current comment being typed. */
     const [comment, setComment] = React.useState('')
 
+    /* This useEffect hook saves the blogs state to localStorage whenever blogs changes. */
     React.useEffect(function(){
         localStorage.setItem('blogs', JSON.stringify(blogs))
     }, [blogs])
 
+
+    /* The createBlog function handles the form input changes */
+    /* It updates the state (blogCreate) with the new values entered by the user. */
+   /*  event object contains information about the event that triggered the function, in this case, a change in one of the form inputs. */
     function createBlog(e) {
         if (e.target.name === "img") {
+           /*  e.target.files[0] retrieves the first file selected by the user. */
             const file = e.target.files[0];
+          /*   A FileReader object is created to read the file's content. */
             const reader = new FileReader();
+            /* img: reader.result updates the img property with the file's data URL. */
             reader.onloadend = () => {
                 setBlogCreate({...blogCreate, img: reader.result});
             };
+
+            /* This method starts reading the contents of the file. When finished, the onloadend event handler (defined above) will be executed. */
             reader.readAsDataURL(file);
+            
         } else {
             setBlogCreate({...blogCreate, [e.target.name]: e.target.value});
         }

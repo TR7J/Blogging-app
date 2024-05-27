@@ -13,6 +13,7 @@ export default function SignUp(){
     const hoverElement = <div className="hover" style={styles2}></div>
 
     const [hover, setHover] = React.useState(hoverElement)
+    /* Programmatically navigating to different routes within your application */
     const navigate = useNavigate(); 
 
     function moveHoverRight() {
@@ -29,11 +30,15 @@ export default function SignUp(){
     const SignUp = localStorage.getItem("signUp")
     const [goToHome, setGoToHome] = React.useState(false)
 
+    /* for performing side effects */
+
     React.useEffect(function () {
         if (SignUp) {
             setGoToHome(true)
         }
     }, [SignUp])
+
+
     function moveToHome(){
         if(name.current.value&&email.current.value&&password.current.value){
             localStorage.setItem("name", name.current.value)
@@ -41,8 +46,7 @@ export default function SignUp(){
             localStorage.setItem("password", password.current.value)
             localStorage.setItem("signUp", email.current.value)
             alert("Your New Account is ready!!")
-            /* window.location.reload() */
-           /*  history.push('/Home'); */
+ 
             navigate('/Home')
         }
     }   

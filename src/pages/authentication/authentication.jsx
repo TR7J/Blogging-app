@@ -25,8 +25,11 @@ export default function Authentication(){
         setHover(hoverElement)
     }
 
+   /*  To directly interact with DOM elements */
     const name = React.useRef()
     const password = React.useRef()
+
+
     const SignUp = localStorage.getItem("signUp")
     const [goToHome, setGoToHome] = React.useState(false)
     const loginName = localStorage.getItem("name")
